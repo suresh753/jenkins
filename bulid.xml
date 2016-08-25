@@ -1,14 +1,12 @@
-<project default="runJunittest" name="compile and run Junit test"> 
-<target name="runJunittest" depends="compile"> 
-<junit printsummary="on"> 
- <test name="FirstTest"/> 
-  <classpath> 
-  <pathelement location="junit-4.10.jar"/> 
-  <pathelement location="."/> 
-  </classpath> 
- </junit> 
-</target> 
-<target name="compile"> 
- <javac includeantruntime="false" srcdir="." destdir="." classpath="junit-4.10.jar"/> 
-</target> 
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="compile">
+<target name="clean">  
+<delete dir="./build/classes"/>
+<delete dir="./build"/>
+</target>
+<target name="compile" depends="clean">
+<mkdir dir="./build"/>
+<mkdir dir="./build/classes"/>
+<javac includeantruntime="true" srcdir="./src" destdir="./build/classes"/>
+</target>
 </project>
