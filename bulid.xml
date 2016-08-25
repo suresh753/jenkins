@@ -1,0 +1,14 @@
+<project default="runJunittest" name="compile and run Junit test"> 
+<target name="runJunittest" depends="compile"> 
+<junit printsummary="on"> 
+ <test name="FirstTest"/> 
+  <classpath> 
+  <pathelement location="junit-4.10.jar"/> 
+  <pathelement location="."/> 
+  </classpath> 
+ </junit> 
+</target> 
+<target name="compile"> 
+ <javac includeantruntime="false" srcdir="." destdir="." classpath="junit-4.10.jar"/> 
+</target> 
+</project>
