@@ -4,6 +4,7 @@
 <delete dir="./build/classes"/>
 <delete dir="./build"/>
 </target>
+<!-- -->
 <target name="compile" depends="clean">
 <mkdir dir="./build"/>
 <mkdir dir="./build/classes"/>
