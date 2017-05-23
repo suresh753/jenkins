@@ -1,4 +1,4 @@
-class usuresh{
+class suresh{
 
 ;package {'suresh':
 ensure => installed,

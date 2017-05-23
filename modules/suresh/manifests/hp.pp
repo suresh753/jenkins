@@ -1,0 +1,2 @@
+class suresh::hp{
+}
