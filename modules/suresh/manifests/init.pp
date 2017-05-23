@@ -1,6 +1,6 @@
 class suresh{
 
-package {'suresh':
+;package {'suresh':
 ensure => installed,
 }
 }
