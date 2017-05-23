@@ -1,0 +1,16 @@
+#!/bin/bash
+# Select only the update manifest files
+FILES=$(git diff --cached --name-only)
+$status = 0
+for file in ${FILES[@]}
+do
+  if [[ $file =~ \.*.pp$ ]]
+  then
+    ~/bin/puppet-lint --with-filename "$file"
+    if [[ $? -ne 0 ]]
+    then
+	$status =  1
+    fi
+  fi
+done
+exit $status
