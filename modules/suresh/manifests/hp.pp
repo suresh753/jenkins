@@ -1,2 +1,2 @@
-class suresh::hp{
+class uresh::hp{
 }
